@@ -25,10 +25,11 @@
     width: calc(100% - 225px);
     padding: var(--space-2xl) var(--div-margin);
     background-color: #fff;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--black);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: var(--black);
   }
 
   &__header-area {
@@ -49,7 +50,6 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      color: var(--primary);
     }
     .head {
       margin: 0;
@@ -72,7 +72,6 @@
     font-weight: 200;
     letter-spacing: var(--x-spaced);
     text-transform: uppercase;
-    color: var(--primary) !important;
     margin: 0;
     margin-top: -15px;
   }
@@ -162,8 +161,8 @@
         content: '';
         bottom: 2px;
         left: calc(-1 * var(--space-xl));
-        background-color: var(--primary);
-        height: 2px;
+        background-color: var(--grey-fade-3);
+        height: 1px;
         width: calc(100% + (2 * var(--space-xl)));
       }
     }
@@ -173,7 +172,7 @@
       font-size: var(--text-md);
       font-weight: bold;
       font-family: var(--font-sans);
-      color: var(--text) !important;
+      color: var(--black) !important;
     }
     .deposit-row {
       position: relative;
@@ -193,7 +192,7 @@
         content: '';
         top: -2px;
         left: calc(-1 * var(--space-xl));
-        background-color: var(--primary);
+        background-color: var(--grey-fade-3);
         height: 2px;
         width: calc(100% + (2 * var(--space-xl)));
       }
@@ -224,7 +223,7 @@
   &__header {
     position: relative;
     font-family: var(--font-display);
-    font-weight: 700;
+    font-weight: 200;
     font-style: var(--text-lg);
     letter-spacing: var(--sm-spaced);
     text-transform: uppercase;
@@ -233,7 +232,7 @@
       content: "";
       bottom: calc(-1 * var(--space-md));
       left: 0;
-      height: 1px;
+      height: .5px;
       width: 100%;
       background-color: var(--primary);
     }
