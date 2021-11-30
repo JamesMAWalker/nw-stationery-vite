@@ -1,0 +1,154 @@
+.home-page {
+  position: relative;
+  min-height: calc(100vh - (2 * var(--vert-margin)));
+  min-width: calc(100vw - (2 * var(--vert-margin)));
+  padding: var(--vert-margin);
+  background: url('https://res.cloudinary.com/jameswalker-work/image/upload/v1583911192/NW_Photography/float_right_to3zwv.jpg');
+  background-size: cover;
+  background-position: right;
+  font-family: var(--font-home);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  color: var(--grey-light);
+  @media (max-width: 1024px) {
+    padding: var(--space-3xl);
+    min-height: 200vh;
+    justify-content: flex-start;
+    min-width: unset;
+    width: calc(100vw - (2 * var(--space-3xl)));
+    align-items: center;
+    background-size: cover;
+    background-position: 60% 50%;
+  }
+  .logo {
+    position: absolute;
+    top: var(--vert-margin);
+    right: var(--vert-margin);
+    transform: scale(1.25);
+    path {
+      fill: var(--black);
+    }
+    @media (max-width: 1024px) {
+      position: relative;
+      top: unset;
+      right: unset;
+      svg {
+        width: 125px;
+      }
+    }
+  }
+  .header {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: var(--text-3xl);
+    letter-spacing: var(--x-spaced);
+    color: var(--black);
+    text-align: left;
+    @media (max-width: 1024px) {
+      align-self: flex-start;
+      font-size: var(--text-2xl);
+    }
+    .company-name {
+      font-weight: 400;
+      font-size: var(--text-xl);
+    }
+  }
+  .options-header {
+    position: relative;
+    margin: var(--vert-margin) 0;
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: var(--spaced);
+    @media (max-width: 1024px) {
+      margin-bottom: 15vh;
+      align-self: flex-start;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      height: 1 px;
+      width: 30%;
+      background-color: var(--grey-light);
+      bottom: calc(-1 * var(--space-xl));
+      left: 0;
+      @media (max-width: 1024px) {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.options-list {
+  display: grid;
+  gap: var(--space-2xl);
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, 15vw);
+  max-width: 80vw;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  @media (max-width: 1024px) {
+    width: 90vw;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // gap: var(--space-2xl);
+    // grid-template-columns: 100%;
+    // grid-template-rows: repeat(3, 30vh);
+  }
+  .option {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media (max-width: 1024px) {
+      height: 35vh;
+      width: 100%;
+      background-color: var(--grey-fade-3);
+    }
+    .image-wrapper {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    img {
+      object-fit: cover;
+      object-position: center;
+      transition: all ease-out 1.5s;
+    }
+    h4 {
+      font-size: var(--text-md);
+      letter-spacing: var(--spaced);
+      @media (max-width: 1024px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -150%);
+        font-size: var(--text-xl);
+        color: var(--grey-dark);
+        font-weight: 200;
+        letter-spacing: var(--spaced);
+      }
+    }
+  }
+  .option[data-disabled] {
+    cursor: no-drop;
+    position: relative;
+    opacity: 0.5;
+  }
+  .option-photo {
+    height: 100%;
+    width: 100%;
+  }
+}
