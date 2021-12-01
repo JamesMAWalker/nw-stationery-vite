@@ -119,13 +119,15 @@
       &:hover {
         img {
           transform: scale(1.1);
+          filter: saturate(2);
         }
       }
     }
     img {
       object-fit: cover;
       object-position: center;
-      transition: all ease-out 1.5s;
+      transition: all ease-out 1s;
+      filter: saturate(.75);
     }
     h4 {
       font-size: var(--text-md);

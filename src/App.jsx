@@ -18,6 +18,7 @@ function App() {
   const [rowCollapsed, setRowCollapsed] = useState(false)
   const [isDeposit, setIsDeposit] = useState(false)
   const [packageItems, setPackageItems] = useState([])
+
   const templateRoutes = [
     {
       path: '/estimate',
@@ -69,10 +70,6 @@ function App() {
     // set breakpoint for JS
     setIsMobile(window.innerWidth <= 1148)
   }, [])
-
-  /*
-   
-  */
 
   return (
     <div className='App'>

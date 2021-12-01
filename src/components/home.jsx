@@ -5,29 +5,22 @@ import { NWLogo } from '../assets/NW-logo';
 
 import './home.scss'
 
-const imgLinks = {
-  invoice: `https://res.cloudinary.com/jameswalker-work/image/upload/f_auto/q_40/v1624186546/Radiance/INV__f_hhho7u.png`,
-  receipt: `https://res.cloudinary.com/jameswalker-work/image/upload/f_auto/q_40/v1624532478/Radiance/Rec__1_h4jhtr.png`,
-}
 
 const templateInfo = [
   {
     name: 'Estimate',
     path: '/estimate',
-    imgSrc:
-      'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto/q_40/v1624186546/Radiance/INV__f_hhho7u.png',
+    imgUrlFrag: 'estimate__thumb_xk0jbj',
   },
   {
     name: 'Invoice',
     path: '/invoice',
-    imgSrc:
-      'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto/q_40/v1624186546/Radiance/INV__f_hhho7u.png',
+    imgUrlFrag: 'invoice__thumb_gsrljv',
   },
   {
     name: 'Receipt',
     path: '/receipt',
-    imgSrc:
-      'https://res.cloudinary.com/jameswalker-work/image/upload/f_auto/q_40/v1624532478/Radiance/Rec__1_h4jhtr.png',
+    imgUrlFrag: 'receipt__thumb_la7qgb',
   },
 ]
 
@@ -48,11 +41,11 @@ export const Home = () => {
         {templateInfo.map((tmpl) => {
           // const dataDisabled = tmpl.name === "Contract" ? `` : null
           return (
-            <NavLink to={tmpl.path} className='option' >
+            <NavLink to={tmpl.path} className='option'>
               <div className='image-wrapper'>
                 <img
                   className='option-photo'
-                  src={tmpl.imgSrc}
+                  src={`https://res.cloudinary.com/jameswalker-work/image/upload/f_auto,q_auto/v1638338005/NW_Photography/Stationery/Mockups/${tmpl.imgUrlFrag}.png`}
                   alt={`${tmpl.name} document photo`}
                 />
               </div>
